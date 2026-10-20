@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+main > img,
+#fotoTurma {
+    width: 100%;
+    max-width: 900px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* BOTÕES */
+
+nav {
+    margin-top: 35px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 8px;
+    padding: 15px 25px;
+    background-color: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #374151;
+    transform: translateY(-3px);
+}
+
+.professor {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin: 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.professor:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.professor img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #111827;
+}
+
+.professor h2 {
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+.professor p {
+    font-size: 16px;
+    color: #6b7280;
+}
+.aluno {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin: 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.aluno:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.aluno img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #111827;
+}
+
+.aluno h2 {
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+.aluno p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.voltar {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.botao-voltar {
+    display: inline-block;
+    padding: 13px 22px;
+    background-color: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.botao-voltar:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+}
+#imagemAmpliada {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    justify-content: center;
+    align-items: center;
+}
+
+#imagemAmpliada img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+.materias-professor {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+}
+
+.materias-professor h2 {
+    margin-bottom: 15px;
+}
+
+.materias-professor p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#fecharMaterias {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .professor,
+    .aluno {
+        width: 90%;
+        max-width: 300px;
+        margin: 15px auto;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px auto;
+        max-width: 300px;
+    }
+}
+
+.inicio {
+    text-align: center;
+}
+
+.inicio p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu {
+    margin-top: 60px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    width: 280px;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #1f2937;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.card span {
+    font-size: 45px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+.sobre,
+.projetos {
+    max-width: 850px;
+    margin: 70px auto 0;
+    padding: 35px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sobre h2,
+.projetos h2 {
+    margin-top: 0;
+}
+
+footer {
+    margin-top: 70px;
+    padding: 30px;
+    background-color: #111827;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+header h1 {
+    background-color: #0284c7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
