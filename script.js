@@ -17,7 +17,7 @@ function mostrarMaterias(professor) {
 
     if (professor === "professor2") {
 
-        nome.innerText = "Nome do Professor 2";
+        nome.innerText = "Luis Dantas";
 
         materias.innerHTML = `
             • Programação<br>
